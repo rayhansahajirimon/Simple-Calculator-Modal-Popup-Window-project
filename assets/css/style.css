@@ -108,23 +108,22 @@ button:hover {
     cursor: pointer;
 }
 
-.github-btn {
-    margin-top: 15px;
+.github-btn button {
+    margin-top: 20px;
     width: 100%;
     padding: 14px;
     font-size: 16px;
     border: none;
     border-radius: 12px;
-    background: linear-gradient(to right, #333333, #555555);
-    color: white;
+    background: linear-gradient(135deg, #24292e, #586069);
+    color: #fff;
+    font-weight: bold;
     cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     transition: background 0.3s ease, transform 0.2s ease;
-    box-shadow: 4px 4px 10px #c6ceda, -4px -4px 10px #ffffff;
 }
 
-.github-btn:hover {
-    background: linear-gradient(to right, #111111, #333333);
+.github-btn button:hover {
+    background: linear-gradient(135deg, #1c1f22, #444c56);
     transform: scale(1.03);
 }
-
-
