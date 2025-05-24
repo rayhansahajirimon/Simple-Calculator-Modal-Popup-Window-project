@@ -1,28 +1,39 @@
-function appendToDiplay(value){
+function appendToDiplay(value) {
     let data = document.getElementById("display");
-    data.value = data.value + value ;
+    data.value += value;
+}
 
-    // document.getElementById('display').value += value; // Short hand code
-};
-
-function clearDisplay(){
+function clearDisplay() {
     let data = document.getElementById("display");
     data.value = '';
-};
+}
 
-function displayLast(){
+function displayLast() {
     let data = document.getElementById("display");
-    data.value = data.value.slice(0,-1);
-};
+    data.value = data.value.slice(0, -1);
+}
 
-
-function calculateResult(){
-    try{
+function calculateResult() {
+    try {
         let result = eval(document.getElementById("display").value);
-        console.log(result);
-
         document.getElementById("display").value = result;
-    }catch (error){
-        console.log(error);
+    } catch (error) {
+        alert("Invalid Expression");
+    }
+}
+
+// Modal Functions
+function openModal() {
+    document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+
+window.onclick = function(event) {
+    const modal = document.getElementById("modal");
+    if (event.target === modal) {
+        closeModal();
     }
 };

@@ -1,20 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Simple Calculator Design</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="assets/css/style.css">
-    </head>
-    <body>
-        <div class="calculator">
-            <input type="text"  id="display" readonly>
-            <div class="buttons">
+<head>
+    <title>Simple Calculator Design</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <div class="buttons">
             <button onclick="clearDisplay()">C</button>
-
             <button onclick="displayLast()">Del</button>
-
             <button onclick="appendToDiplay('%')">%</button>
             <button onclick="appendToDiplay('/')">/</button>
             <button onclick="appendToDiplay('7')">7</button>
@@ -31,12 +28,23 @@
             <button onclick="appendToDiplay('+')">+</button>
             <button onclick="appendToDiplay('0')">0</button>
             <button onclick="appendToDiplay('.')">.</button>
-
             <button onclick="calculateResult()">=</button>
         </div>
-        </div>
         
+        <!-- Modal Button -->
+        <button class="modal-btn" onclick="openModal()">About</button>
+    </div>
 
-        <script src="app.js"></script>
-    </body>
+    <!-- Modal Window -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>About This Calculator</h2>
+            <p>This is a simple calculator built using HTML, CSS, and JavaScript.</p>
+            <p>Created by Rayhan Sahaji.</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
 </html>
